@@ -60,32 +60,30 @@
 	}
 </style>
 	<script type="text/javascript">
-			/**
-		 	* jQuery 扩展方法
-			*
-		 	* $.Object.count( p )
-		 	* 获取一个对象的长度，需要指定上下文，通过 call/apply 调用
-		 	* 示例: $.Object.count.call( obj, true );
-		 	* @param {p} 是否跳过 null / undefined / 空值
-			*
-			*/
-			$.extend({
-			 	// 获取对象的长度，需要指定上下文 this
-			 	Object: {
-			 		count: function( p ) {
-				 		p = p || false;
-				 		
-				 		return $.map( this, function(o) {
+		/**
+		* jQuery 扩展方法
+		*
+		* $.Object.count( p )
+		* 获取一个对象的长度，需要指定上下文，通过 call/apply 调用
+		* 示例: $.Object.count.call( obj, true );
+		* @param {p} 是否跳过 null / undefined / 空值
+		*
+		*/
+		$.extend({
+			// 获取对象的长度，需要指定上下文 this
+			Object: {
+				count: function( p ) {
+					p = p || false;
+					return $.map( this, function(o) {
 				 		if( !p ) return o;
 				 			return true;
 				 		} ).length;
-					}
 				}
-			});
+			}
+		});
 		
 		// 过滤空值
 		//console.log( $.Object.count.call( obj, true ) );
-	
 	
 		var key, lastValue = "", nodeList = [], type = getQueryString("type", "${url}");
 		var tree, setting = {view:{selectedMulti:false,dblClickExpand:false},check:{enable:"${checked}",nocheckInherit:true},
@@ -105,97 +103,91 @@
 						selectall.checked = false;
 						$("#relatelables").empty();
 						$.ajax({ 
-			          			     type : "POST",   
-			          			     url : '${ctx_a}/cms/relatedlable',
-			          			     data : {
-			            				   id : treeNode.id
-			          			},
-			          			 dataType : "json",
-			          			 success : function(data){
-			          			 	 var flg1=0;
-				          			 if(treeNode.deflg==0){
-				          			 	var size = $.Object.count.call( $(".lablelist"), true );
-				         				//正常标签 //已选标签队列不为空
-				        				if(size!=0){
-					          			 	$(".lablelist").each(function(){
-					          			 		//遍历匹配已选标签队列，匹配成功，标记置为1,跳出循环
-					          			 		if(treeNode.id==$(this).val()){
-					          			 			flg1=1;
-					          			 			$("#relatelables").append("<p class='lables'><span class='lablename'>"+treeNode.name+"</span><input checked='checked' name='selectTag' class='selectedTag' type='checkbox'  value="+treeNode.id +"  labelname="+treeNode.name+" delFlag="+treeNode.deflg+" /></p>");
-					          			 			return false; //跳出循环
-					          			 		}
-					          			 	});
-					          			 	//遍历匹配已选标签队列，匹配不成功，判断标记,执行添加元素
-					          			 	if(flg1==0){
-					          			 		$("#relatelables").append("<p class='lables'><span class='lablename'>"+treeNode.name+"</span><input  name='selectTag' class='selectedTag' type='checkbox'  value="+treeNode.id +"  labelname="+treeNode.name+" delFlag="+treeNode.deflg+" /></p>");
-					          			 		
-					          			 	}
-					          			//已选标签队列为空
-				          			 	}else{
-				          			 		$("#relatelables").append("<p class='lables'><span class='lablename'>"+treeNode.name+"</span><input  name='selectTag' class='selectedTag' type='checkbox'  value="+treeNode.id +"  labelname="+treeNode.name+" delFlag="+treeNode.deflg+" /></p>");
-				          			 		 
-				          			 	}
-				          			 //待审核	标签
-				          			 }else if(treeNode.deflg==1){
-				          			 	var size = $.Object.count.call( $(".lablelist"), true );
-				         				//已选标签队列不为空
-				        				if(size!=0){
-					          			 	$(".lablelist").each(function(){
-					         					//遍历匹配已选标签队列，匹配成功，标记置为1,跳出循环
-					          			 		if(treeNode.id==$(this).val()){
-					          			 			flg1=1;
-				          			 				$("#relatelables").append("<p class='lables'><span class='lablename' style='color:blue;' title='待审核' >"+treeNode.name+"</span><input checked='checked' name='selectTag' class='selectedTag' type='checkbox'  value="+treeNode.id +"  labelname="+treeNode.name+" delFlag="+treeNode.deflg+" /></p>");
-					          			 			return false; //跳出循环
-					          			 		}
-					          			 	});
-					          			 	//遍历匹配已选标签队列，匹配不成功，判断标记,执行添加元素
-					          			 	if(flg1==0){
-				          			 			$("#relatelables").append("<p class='lables'><span class='lablename' style='color:blue;' title='待审核' >"+treeNode.name+"</span><input name='selectTag' class='selectedTag' type='checkbox'  value="+treeNode.id +"  labelname="+treeNode.name+" delFlag="+treeNode.deflg+" /></p>");
-					          			 	}
-					          			//已选标签队列为空
-				          			 	}else{
-				          			 		$("#relatelables").append("<p class='lables'><span class='lablename' style='color:blue;' title='待审核' >"+treeNode.name+"</span><input name='selectTag' class='selectedTag' type='checkbox'  value="+treeNode.id +"  labelname="+treeNode.name+" delFlag="+treeNode.deflg+" /></p>"); 
-				          			 	}
-				          			 }
-				          			 
-				          			//遍历ajx获取到的后台数据
-			          			  	$.each(data,function(idx,item){
-			          			  		//审核通过 
-			          			  		if(data[idx].deflg==0){
-			          			  			var falg2 = 0;
-			          			  			$(".lablelist").each(function(){
-			          			  				//遍历匹配已选标签队列，匹配成功，标记置为1,跳出循环
-			          			  				if(data[idx].labelid==$(this).val()){
-			          			  					//已选
-			          			  					falg2=1;
-			          			  					$("#relatelables").append("<p class='lables'><span class='lablename'>"+data[idx].labelname+"</span><input name='selectTag' checked='checked' class='selectedTag' type='checkbox'  value="+data[idx].labelid +"  labelname="+data[idx].labelname+" delFlag="+data[idx].deflg+" /></p>");
-			          			  				}
-			          			  			});
-			          			  			
-			          			  			if(falg2==0){
-			          			  				$("#relatelables").append("<p class='lables'><span class='lablename'>"+data[idx].labelname+"</span><input name='selectTag'  class='selectedTag' type='checkbox'  value="+data[idx].labelid +"  labelname="+data[idx].labelname+" delFlag="+data[idx].deflg+" /></p>");
-			          			  			}
-			          			  		}else{
-			          			  		//待审核
-			          			  			var falg3 = 0;
-			          			  			$(".lablelist").each(function(){
-			          			  				if(data[idx].labelid==$(this).val()){
-			          			  					//已选
-			          			  					falg3=1;
-			          			  					$("#relatelables").append("<p class='lables'><span class='lablename' style='color:blue;' title='待审核' >"+data[idx].labelname+"</span><input checked='checked' name='selectTag' class='selectedTag' type='checkbox'  value="+data[idx].labelid +"  labelname="+data[idx].labelname+" delFlag="+data[idx].deflg+" /></p>");
-			          			  				}
-			          			  			});
-			          			  			if(falg3==0){
-			          			  					$("#relatelables").append("<p class='lables'><span class='lablename' style='color:blue;' title='待审核' >"+data[idx].labelname+"</span><input  name='selectTag' class='selectedTag' type='checkbox'  value="+data[idx].labelid +"  labelname="+data[idx].labelname+" delFlag="+data[idx].deflg+" /></p>");
-			          			  			}
-			          			  		}
-			          			  	});
-			          			  	
-			          			  	
-			          			},
-			          			 error : function(jqXHR){     
-			            				alert("发生错误：" + jqXHR.status); 
-			          			}    
+			          		type 	: "POST",   
+			          		url 	: '${ctx_a}/cms/relatedlable',
+			          		data 	: {
+			            		id 	: treeNode.id
+			          		},
+			          		dataType 	: "json",
+			          		success 	: function(data){
+				          		var flg1=0;
+					          	if(treeNode.deflg==0){
+					          		var size = $.Object.count.call( $(".lablelist"), true );
+					         		//正常标签 //已选标签队列不为空
+					        		if(size!=0){
+						          		$(".lablelist").each(function(){
+						          		//遍历匹配已选标签队列，匹配成功，标记置为1,跳出循环
+						          			 if(treeNode.id==$(this).val()){
+						          			 	flg1=1;
+						          			 	$("#relatelables").append("<p class='lables'><span class='lablename'>"+treeNode.name+"</span><input checked='checked' name='selectTag' class='selectedTag' type='checkbox'  value="+treeNode.id +"  labelname="+treeNode.name+" delFlag="+treeNode.deflg+" /></p>");
+						          			 	return false; //跳出循环
+						          			 }
+						          		});
+						          		//遍历匹配已选标签队列，匹配不成功，判断标记,执行添加元素
+						          		if(flg1==0){
+						          			$("#relatelables").append("<p class='lables'><span class='lablename'>"+treeNode.name+"</span><input  name='selectTag' class='selectedTag' type='checkbox'  value="+treeNode.id +"  labelname="+treeNode.name+" delFlag="+treeNode.deflg+" /></p>");
+						          		}
+						          	//已选标签队列为空
+					          		}else{
+					          			 $("#relatelables").append("<p class='lables'><span class='lablename'>"+treeNode.name+"</span><input  name='selectTag' class='selectedTag' type='checkbox'  value="+treeNode.id +"  labelname="+treeNode.name+" delFlag="+treeNode.deflg+" /></p>");
+					          		}
+					          	//待审核标签
+					          	}else if(treeNode.deflg==1){
+					          		var size = $.Object.count.call( $(".lablelist"), true );
+					         		//已选标签队列不为空
+					        		if(size!=0){
+						          		$(".lablelist").each(function(){
+						         			//遍历匹配已选标签队列，匹配成功，标记置为1,跳出循环
+						          			if(treeNode.id==$(this).val()){
+						          			 	flg1=1;
+					          			 		$("#relatelables").append("<p class='lables'><span class='lablename' style='color:blue;' title='待审核' >"+treeNode.name+"</span><input checked='checked' name='selectTag' class='selectedTag' type='checkbox'  value="+treeNode.id +"  labelname="+treeNode.name+" delFlag="+treeNode.deflg+" /></p>");
+						          			 	return false; //跳出循环
+						          			 }
+						          		});
+						          		//遍历匹配已选标签队列，匹配不成功，判断标记,执行添加元素
+						          		if(flg1==0){
+					          			 	$("#relatelables").append("<p class='lables'><span class='lablename' style='color:blue;' title='待审核' >"+treeNode.name+"</span><input name='selectTag' class='selectedTag' type='checkbox'  value="+treeNode.id +"  labelname="+treeNode.name+" delFlag="+treeNode.deflg+" /></p>");
+						          		}
+						          	//已选标签队列为空
+					          		}else{
+					          			$("#relatelables").append("<p class='lables'><span class='lablename' style='color:blue;' title='待审核' >"+treeNode.name+"</span><input name='selectTag' class='selectedTag' type='checkbox'  value="+treeNode.id +"  labelname="+treeNode.name+" delFlag="+treeNode.deflg+" /></p>"); 
+					          		}
+					          	}
+					          	//遍历ajx获取到的后台数据
+				          		$.each(data,function(idx,item){
+				          			  //审核通过 
+				          			  if(data[idx].deflg==0){
+				          			  	var falg2 = 0;
+				          			  	$(".lablelist").each(function(){
+				          			  		//遍历匹配已选标签队列，匹配成功，标记置为1,跳出循环
+				          			  		if(data[idx].labelid==$(this).val()){
+				          			  			//已选
+				          			  			falg2=1;
+				          			  			$("#relatelables").append("<p class='lables'><span class='lablename'>"+data[idx].labelname+"</span><input name='selectTag' checked='checked' class='selectedTag' type='checkbox'  value="+data[idx].labelid +"  labelname="+data[idx].labelname+" delFlag="+data[idx].deflg+" /></p>");
+				          			  		}
+				          			  	});
+				          			  	if(falg2==0){
+				          			  		$("#relatelables").append("<p class='lables'><span class='lablename'>"+data[idx].labelname+"</span><input name='selectTag'  class='selectedTag' type='checkbox'  value="+data[idx].labelid +"  labelname="+data[idx].labelname+" delFlag="+data[idx].deflg+" /></p>");
+				          			  	}
+				          			}else{
+				          				//待审核
+				          				var falg3 = 0;
+				          			 	$(".lablelist").each(function(){
+					          			  	if(data[idx].labelid==$(this).val()){
+					          			  		//已选
+					          			  		falg3=1;
+					          			  		$("#relatelables").append("<p class='lables'><span class='lablename' style='color:blue;' title='待审核' >"+data[idx].labelname+"</span><input checked='checked' name='selectTag' class='selectedTag' type='checkbox'  value="+data[idx].labelid +"  labelname="+data[idx].labelname+" delFlag="+data[idx].deflg+" /></p>");
+					          			  	}
+				          			  	});
+				          			  	if(falg3==0){
+				          			  		$("#relatelables").append("<p class='lables'><span class='lablename' style='color:blue;' title='待审核' >"+data[idx].labelname+"</span><input  name='selectTag' class='selectedTag' type='checkbox'  value="+data[idx].labelid +"  labelname="+data[idx].labelname+" delFlag="+data[idx].deflg+" /></p>");
+				          			  	}
+				          			}
+				          		});
+			          		},
+			          		error : function(jqXHR){     
+			            		alert("发生错误：" + jqXHR.status); 
+			          		}    
 			        	});
 					},onCheck: function(e, treeId, treeNode){
 						var nodes = tree.getCheckedNodes(true);
