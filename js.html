@@ -419,50 +419,49 @@
 		</p>
 	</div>
 <script>
-		//checkbox点击事件监听
-		$('body').on('click' , '.selectedTag' , function(){ 
-			if($(this).is(':checked')){
-		        	//选中标签，添加标签到已选队列
-		        	var labelname = $(this).attr("labelname");
-		        	var labelid = $(this).val();
-		        	if($(this).attr("delFlag")==0){
-		        		$("#selectedLableList").append("<span  style='margin-right:8px;' ><input name='selectTag_1' class='lablelist' delFlag='0' type='checkbox' value="+$(this).val() +" lablename="+$(this).attr('labelname')+" checked='checked' />"+$(this).attr('labelname')+"</span>");	
+	//checkbox点击事件监听，jquery用ajax加载出来的html,无法用选择器绑定事件,但可以直接在html上使用onclick等事件
+	//用委托，可以绑定追加元素点击事件
+	$('body').on('click' , '.selectedTag' , function(){ 
+		if($(this).is(':checked')){
+		        //选中标签，添加标签到已选队列
+		        var labelname = $(this).attr("labelname");
+		        var labelid = $(this).val();
+		        if($(this).attr("delFlag")==0){
+		        	$("#selectedLableList").append("<span  style='margin-right:8px;' ><input name='selectTag_1' class='lablelist' delFlag='0' type='checkbox' value="+$(this).val() +" lablename="+$(this).attr('labelname')+" checked='checked' />"+$(this).attr('labelname')+"</span>");	
+		        }
+		        if($(this).attr("delFlag")==1){
+		        	$("#selectedLableList").append("<span  style='margin-right:8px;' ><input name='selectTag_1' class='lablelist' delFlag='1' type='checkbox' value="+$(this).val() +" lablename="+$(this).attr('labelname')+" checked='checked' /><span style='color:blue;' title='待审核'>"+$(this).attr('labelname')+"</span></span>");	
+		        }
+		}else{
+		        //取消选中标签，遍历已选标签队列，移除对应的标签
+		        var id = $(this).val();
+		        $(".lablelist").each(function(){
+		        	if(id==$(this).val()){
+		        		$(this).parent().remove();
 		        	}
-		        	if($(this).attr("delFlag")==1){
-		        		$("#selectedLableList").append("<span  style='margin-right:8px;' ><input name='selectTag_1' class='lablelist' delFlag='1' type='checkbox' value="+$(this).val() +" lablename="+$(this).attr('labelname')+" checked='checked' /><span style='color:blue;' title='待审核'>"+$(this).attr('labelname')+"</span></span>");	
-		        	}
-		        }else{
-		        	//取消选中标签，遍历已选标签队列，移除对应的标签
-		        	var id = $(this).val();
-		        	$(".lablelist").each(function(){
-		        		if(id==$(this).val()){
-		        			$(this).parent().remove();
-		        		}
-		        	});
-		        }    
-		});	
+		        });
+		}    
+	});	
 		
-		//无效
-		$(document).ready(function(){
-				var obj = $("#mainFrame").contents().find("input[name=selectTag]");
-				for(k in obj){
-					//alert(obj[k].val()+":"+obj[k].checked);
-					if(obj[k].checked){
-						var v1 = obj[k];
-						var v = $(v1);
-						if($(v).attr('delFlag')==0){
-							
-							$("#selectedLableList").append("<input name='selectTag' class='selectedTag'   type='checkbox' value=" +obj[k].value + " checked='checked' />" +$(v).attr('lablename'));								
-						}else{
-							$("#selectedLableList").append("<input name='selectTag' class='selectedTag' type='checkbox' value="+obj[k].value +" checked='checked' /><span class='blueTag' title='待审核'>"+$(v).attr("labelvalue1")+"</span>");
-						}
-					}
+	//无效,尝试无法从主ifram中拿到对象数据到jbox弹框页面中，选择从参数从后台获取过滤
+	$(document).ready(function(){
+		var obj = $("#mainFrame").contents().find("input[name=selectTag]");
+		for(k in obj){
+			//alert(obj[k].val()+":"+obj[k].checked);
+			if(obj[k].checked){
+				var v1 = obj[k];
+				var v = $(v1);
+				if($(v).attr('delFlag')==0){
+					$("#selectedLableList").append("<input name='selectTag' class='selectedTag'   type='checkbox' value=" +obj[k].value + " checked='checked' />" +$(v).attr('lablename'));								
+				}else{
+					$("#selectedLableList").append("<input name='selectTag' class='selectedTag' type='checkbox' value="+obj[k].value +" checked='checked' /><span class='blueTag' title='待审核'>"+$(v).attr("labelvalue1")+"</span>");
 				}
-		});
+			}
+		}
+	});
 		
-		//全选关联标签
-		function selectAll(){
-			
+	//全选关联标签
+	function selectAll(){
         	var selectall=document.getElementById("selectall");
         	if(selectall.checked){
         		var select=document.getElementsByName("selectTag");
@@ -505,5 +504,4 @@
         	}	
        }
 </script>
-
 </body>
