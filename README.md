@@ -1,4 +1,4 @@
-# __简历(黄美军)__
+# __简历 [黄美军](http://www.ideaofmy.sinaapp.com/about_hmj.html)__
 
 ---
 
