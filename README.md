@@ -18,7 +18,7 @@
 以下均为我熟练使用的技能
 
 - 编程语言：前端web开发语言、Java、PHP、Sql、Android
-- 熟悉的开发框架：thinkPHP 、spring、springMVC、mybities、jquery、bootstrap
+- 熟悉的开发框架：thinkPHP 、spring、springMVC、mybatis、jquery、bootstrap
 - 工具：sublime、SVN、git、eclipse等等
 - 常用操作系统：win7、linux、Android
 - 英语四级：今年努力过
