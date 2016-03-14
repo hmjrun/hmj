@@ -1,4 +1,4 @@
-# __简历(黄美军)[web](http://www.ideaofmy.sinaapp.com/about_hmj.html)__
+# __简历(黄美军)__
 
 ---
 
@@ -28,7 +28,7 @@
 
 ##### __项目1: 知识库(javaWeb)__ 
 
-``` 实习单位：用友网络科技股份有限公司（ 2015年8月 ~ 2016年2月 北京）```
+```实习单位：用友网络科技股份有限公司（ 2015年8月 ~ 2016年2月 北京）```
 我在这个知识库项目中负责知识的发布及其附件的上传管理，知识预览的界面展开和查看权限控制。UEditor作为富媒体编辑，配合阿里云云存储作为媒体存储展。知识文章的附件上传采用uploadify为全格式限制大小上传，对常见的文档、视频格式将在服务端统一转码成pdf、flv格式，双份存储在阿里云，方便用户在线查看、播放和下载。知识预览为H5页面，友好PC和移动端。项目主要构成：Svn,Oracle,Spring,SpringMvc,Mybatis,Shiro,Redis,Jquery,Bootstarp...
 
 
@@ -44,7 +44,7 @@
 2. 实习单位：一天创想（北京）科技有限公司（2014年暑假），PHP程序员 
 3. 工作单位：东莞天安数码城（2013年暑假），保安
 4. 工作单位：深圳市公安局（2012年暑假），协警
-5. [完赛2015.1年厦门马拉松](http://b149.photo.store.qq.com/psb?/V110NVC32jXqgH/lTANC9*cogdxEHbnYOjlfPmBT1DGb6vGXkRF3yo.Vy4!/b/dG5m3VjEJgAA&bo=wAPQAsAD0AIFByQ!&rf=viewer_4)，[完赛2015.9年北京马拉松](http://b163.photo.store.qq.com/psb?/V110NVC32AOkM7/NdOU49v4Xd.ur5hF50y3VCCUvDK2ZTH3iQsDWF1Nf94!/b/dKMAAAAAAAAA&bo=IAONBYUDQAYFAEg!&rf=viewer_4)
+5. [完赛2015.1年厦门马拉松](http://user.qzone.qq.com/892532819/4)，[完赛2015.9年北京马拉松](http://b163.photo.store.qq.com/psb?/V110NVC32AOkM7/NdOU49v4Xd.ur5hF50y3VCCUvDK2ZTH3iQsDWF1Nf94!/b/dKMAAAAAAAAA&bo=IAONBYUDQAYFAEg!&rf=viewer_4)
 6. 五天跨省骑行1000公里（浙江金华->江西全南)寒假回家过年
 
 ---
@@ -53,6 +53,9 @@
 - 男子排球比赛第三名，五星级寝室3次
 - 学校优秀团干部、三好学生
 
+---
+## __自我描述__
+第一份实习工作是在北京用友，刚开始的时候确实压力很大，生怕团队开发中拖后腿；生怕和上级、伙伴沟通不好；生怕自己完不成任务...。这些压力逐渐转换成加班加点的动力，因为底子基础差，这样一个对我来说复杂、大型的项目实战心里是没什么底的。虽然有很多问题，但是瞄准一个点不断花时间去尝试解决、努力和其他经验丰富的同事沟通发现新思路，很多的困难其实并没有刚开始一碰到感觉那样高不可攀。
 
 ---
 ## 致谢
