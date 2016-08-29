@@ -1,3 +1,26 @@
+##3上班笔记(2016.8.29)
+```html
+leave blank to use 'hy'   留空以使用“HY”
+shortcuts 快捷键
+specific 具体
+archive 档案
+idiom 成语
+Raising 提高
+arbitrary 随意
+Failing 失败
+partially 部分
+hardcoded 硬编码
+tightly-coupled 紧密耦合
+reliance  依赖
+explicitly  明确地
+altered 改变
+via 通过
+generic 通用
+redundant 冗
+Convert 兑换
+code-shuffle  代码洗牌
+Amend 修改
+```
 ##2上班笔记(2016.8.26)
 [How to install mysql on Ubuntu-14](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-14-04)
 [Linux操作系统下MySQL数据库的使用方法](http://tech.sina.com.cn/s/s/2008-12-24/09322685698.shtml)
