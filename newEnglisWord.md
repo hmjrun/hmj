@@ -23,7 +23,7 @@
   intuitive 直观的        dozens  数十
   element 元件            tuple   元组
   inefficient 低效        slot    插槽
-  arbitrary   随意
+  arbitrary   随意        prerequisites 先决条件
 ```
 
 ##3笔记(2016.8.29)
