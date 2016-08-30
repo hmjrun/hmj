@@ -23,25 +23,30 @@ Amend 修改
 ```
 ##2上班笔记(2016.8.26)
 [How to install mysql on Ubuntu-14](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-14-04)
+
 [Linux操作系统下MySQL数据库的使用方法](http://tech.sina.com.cn/s/s/2008-12-24/09322685698.shtml)
 
 ```html
 一：mysql:
-  1安装：
+  1，安装：
   sudo apt-get update
   sudo apt-get install mysql-server
-  2确认：
+  
+  2，确认：
   mysql --version
   sudo service mysql start
   service mysql status
-  3连接：
+  
+  3，连接：
     连接到本机上的MYSQL:
       mysql -uroot -p
     连接到远程主机上的MYSQL:
       mysql -h110.110.110.110 -uroot -pabcd123
-  4修改密码：
+      
+  4，修改密码：
     格式：mysqladmin -u用户名 -p旧密码 password 新密码
-  5增加新用户：
+    
+  5，增加新用户：
     （增加一个用户test1密码为abc，让他可以在任何主机上登录，并对所有数据库有查询、插入、修改、删除的权限。首先用以root用户连入MYSQL，然后键入以下命令：）
     //all ip
     grant select,insert,update,delete on *.* to test1@"%" Identified by "abc";
@@ -52,8 +57,24 @@ Amend 修改
   python3下django连接mysql
   sudo apt-get install libmysqlclient-dev python3-dev
   pip3 install mysqlclient
-
-三：单词： 
+  
+三：django命令
+   //交互命令，feel free rich API
+   python manage.py shell 
+   
+   //The sqlmigrate command takes migration names and returns their SQL:
+   python manage.py sqlmigrate polls 0001 
+   
+   //run migrate again to create those model tables in your database：
+   python manage.py migrate
+   
+   //开启web服务器
+   python manage.py runserver 
+   
+   //创建管理员
+   python manage.py createsuperuser
+   
+四：单词： 
 parentheses 括号
 validation 验证
 suffice 满足
