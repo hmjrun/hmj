@@ -1,25 +1,29 @@
+##4上班笔记(2016.8.30)
+```html
+  captured 抓获           automated 自动化
+  routines  例程          identify  鉴定
+  merely as 仅仅作为      negative aspect 消极的一面
+  brilliant 辉煌          maintaining 维持
+  strategies  策略        conventional  常规
+  inadvertently 不经意间  reintroduce 重新引入
+  comprehensive 全面      interacts 交互
+  disposal  处置          simulate  模拟
+  comprised 由            Customize 定制
+  impressive  有声有色
+```
+
 ##3上班笔记(2016.8.29)
 ```html
 一：单词
-  leave blank to use 'hy'   留空以使用“HY”
-  shortcuts 快捷键
-  specific 具体
-  archive 档案
-  idiom 成语
-  Raising 提高
-  arbitrary 随意
-  partially 部分
-  hardcoded 硬编码
-  tightly-coupled 紧密耦合
-  reliance  依赖
-  explicitly  明确地
-  altered 改变
-  via 通过
-  generic 通用
-  redundant 冗
-  Convert 兑换
-  code-shuffle  代码洗牌
-  Amend 修改
+  shortcuts 快捷键          specific 具体
+  archive 档案              idiom 成语
+  Raising 提高              arbitrary 随意
+  partially 部分            hardcoded 硬编码
+  tightly-coupled 紧密耦合  reliance  依赖
+  explicitly  明确地        altered 改变
+  via 通过                  generic 通用
+  redundant 冗              Convert 兑换
+  code-shuffle  代码洗牌    Amend 修改
 ```
 ##2上班笔记(2016.8.26)
 [How to install mysql on Ubuntu-14](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-14-04)
@@ -75,24 +79,15 @@
    python manage.py createsuperuser
    
 四：单词： 
-  parentheses 括号
-  validation 验证
-  suffice 满足
-  introspective 内省
-  designate 指定
-  positional  阵地
-  optional  可选的
-  straightforward 直截了当
-  vote tally  票数
-  publication 出版物
-  essential 必要
-  definitive  明确
-  minimalists 极简主义
-  shipped 运
-  migrate 迁移
-  interactive 互动
-  backends  后端
-  appropriate 适当
+  parentheses 括号          validation 验证
+  suffice 满足              introspective 内省
+  designate 指定            positional  阵地
+  optional  可选的          straightforward 直截了当
+  vote tally  票数          publication 出版物
+  essential 必要            definitive  明确
+  minimalists 极简主义      shipped 运
+  migrate 迁移              interactive 互动
+  backends  后端            appropriate 适当
 ```
 
 
@@ -113,26 +108,14 @@
   //退出python3虚拟环境
   deactivate
 二：单词
-  cruft 克鲁夫特
-  parenthesis 插入语
-  retrieves 检索
-  renders 呈现
-  strives 努力
-  inheritance 遗产
-  dramatically  显着
-  well-integrated 良好集成
-  distribution-specific 配送专用
-  prompt  提示
-  poll  轮询
-  drop by 顺便拜访
-  utility 效用
-  trailing slash  斜杠
-  encounters  遭遇战
-  regex 正则表达式
-  Arbitrary 随意
-  kwargs
-  refer to  参考
-  unambiguously 明白地
+  cruft 克鲁夫特        parenthesis 插入语
+  retrieves 检索        renders 呈现
+  strives 努力          inheritance 遗产
+  dramatically  显着    well-integrated 良好集成
+  prompt  提示          distribution-specific 配送专用
+  poll  轮询            drop by 顺便拜访
+  utility 效用          trailing slash  斜杠
+  encounters  遭遇战    regex 正则表达式
+  Arbitrary 随意        kwargs
+  refer to  参考        unambiguously 明白地
 ```
-
-
