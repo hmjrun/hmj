@@ -1,5 +1,15 @@
 ##4笔记(2016.8.30)
+
+
 ```html
+一：打包，安装应用
+  //在 django/polls 目录里运行
+  python setup.py sdist
+  
+  //安装这个包，得用到pip
+  pip install --user django-polls/dist/django-polls-0.1.tar.gz
+  
+二：单词
   captured 抓获           automated 自动化
   routines  例程          identify  鉴定
   merely as 仅仅作为      negative aspect 消极的一面
@@ -29,6 +39,7 @@
   redundant 冗              Convert 兑换
   code-shuffle  代码洗牌    Amend 修改
 ```
+
 ##2笔记(2016.8.26)
 [How to install mysql on Ubuntu-14](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-14-04)
 
