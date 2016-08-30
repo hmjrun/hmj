@@ -1,4 +1,4 @@
-##4上班笔记(2016.8.30)
+##4笔记(2016.8.30)
 ```html
   captured 抓获           automated 自动化
   routines  例程          identify  鉴定
@@ -9,10 +9,14 @@
   comprehensive 全面      interacts 交互
   disposal  处置          simulate  模拟
   comprised 由            Customize 定制
-  impressive  有声有色
+  impressive  有声有色    intuitive 直观的
+  intuitive 直观的        dozens  数十
+  element 元件            tuple   元组
+  inefficient 低效        slot    插槽
+  arbitrary   随意
 ```
 
-##3上班笔记(2016.8.29)
+##3笔记(2016.8.29)
 ```html
 一：单词
   shortcuts 快捷键          specific 具体
@@ -25,7 +29,7 @@
   redundant 冗              Convert 兑换
   code-shuffle  代码洗牌    Amend 修改
 ```
-##2上班笔记(2016.8.26)
+##2笔记(2016.8.26)
 [How to install mysql on Ubuntu-14](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-14-04)
 
 [Linux操作系统下MySQL数据库的使用方法](http://tech.sina.com.cn/s/s/2008-12-24/09322685698.shtml)
