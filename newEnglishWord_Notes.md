@@ -1,5 +1,55 @@
 ##5笔记(2016.8.31)
+[理解Python中的装饰器](http://www.cnblogs.com/rollenholt/archive/2012/05/02/2479833.html)
 
+```python
+def test_kwargs(first, *args, **kwargs):
+   print 'Required argument: ', first
+   for v in args:
+      print 'Optional argument (*args): ', v
+   for k, v in kwargs.items():
+      print 'Optional argument %s (*kwargs): %s' % (k, v)
+
+test_kwargs(1, 2, 3, 4, k1=5, k2=6)
+# results:
+# Required argument:  1
+# Optional argument (*args):  2
+# Optional argument (*args):  3
+# Optional argument (*args):  4
+# Optional argument k2 (*kwargs): 6
+# Optional argument k1 (*kwargs): 5
+
+import time
+def performance(unit):
+    def perf_decorator(f):
+        def wrapper(*args, **kw):
+            t1 = time.time()
+            r = f(*args, **kw)
+            t2 = time.time()
+            t = (t2 - t1) * 1000 if unit=='ms' else (t2 - t1)
+            print 'call %s() in %f %s' % (f.__name__, t, unit)
+            return r
+        return wrapper
+    return perf_decorator
+
+@performance('ms')
+def factorial(n):
+    return reduce(lambda x,y: x*y, range(1, n+1))
+
+print factorial(10)
+#result:
+#call factorial() in 4.050970 ms
+#3628800
+```
+```html
+二：单词
+  contrbuting 贡献
+  regulary  监管
+  feedback  反馈
+  widest  最宽
+  audience  听众
+  conduct 进行
+  inclusive 包括的
+```
 
 ##4笔记(2016.8.30)
 
@@ -95,6 +145,17 @@
    
    //创建管理员
    python manage.py createsuperuser
+   
+   //创建应用
+   python manage.py startapp app_name
+   
+   //添加应用 /projectName/projectName/settings.py
+   INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
+    'django.contrib.admin',
+    ...
+]
+   
    
 四：单词： 
   parentheses 括号          validation 验证
