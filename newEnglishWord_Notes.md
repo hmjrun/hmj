@@ -1,5 +1,7 @@
-##4笔记(2016.8.30)
+##5笔记(2016.8.31)
 
+
+##4笔记(2016.8.30)
 
 ```html
 一：打包，安装应用
@@ -66,7 +68,8 @@
     格式：mysqladmin -u用户名 -p旧密码 password 新密码
     
   5，增加新用户：
-    （增加一个用户test1密码为abc，让他可以在任何主机上登录，并对所有数据库有查询、插入、修改、删除的权限。首先用以root用户连入MYSQL，然后键入以下命令：）
+    （增加一个用户test1密码为abc，让他可以在任何主机上登录，并对所有数据库有查询、插入、修改、删除的权限。
+    首先用以root用户连入MYSQL，然后键入以下命令：）
     //all ip
     grant select,insert,update,delete on *.* to test1@"%" Identified by "abc";
     //only localhost
