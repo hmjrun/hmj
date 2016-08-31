@@ -109,6 +109,8 @@
 ##1上班笔记(2016.8.25)
 [Getting Started Django in English](https://docs.djangoproject.com/en/1.10/intro/)
 
+[Getting Started Django in zh_CN](http://django-intro-zh.readthedocs.io/zh_CN/latest/)
+
 ```html
 一：Virtualenv
   //首先，安装virtualenv，在默认的python2下的pip就行
