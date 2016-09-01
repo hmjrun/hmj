@@ -15,6 +15,31 @@ print f(10)
 #result
 #[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 ```
+```html
+解压
+
+tar –xvf file.tar //解压 tar包
+
+tar -xzvf file.tar.gz //解压tar.gz
+
+tar -xjvf file.tar.bz2 //解压 tar.bz2
+
+tar –xZvf file.tar.Z //解压tar.Z
+unrar e file.rar //解压rar
+unzip file.zip //解压zip
+
+总结
+
+1、*.tar 用 tar –xvf 解压
+2、*.gz 用 gzip -d或者gunzip 解压
+3、*.tar.gz和*.tgz 用 tar –xzf 解压
+4、*.bz2 用 bzip2 -d或者用bunzip2 解压
+5、*.tar.bz2用tar –xjf 解压
+6、*.Z 用 uncompress 解压
+7、*.tar.Z 用tar –xZf 解压
+8、*.rar 用 unrar e解压
+9、*.zip 用 unzip 解压
+```
 
 ##5笔记(2016.8.31)
 [理解Python中的装饰器](http://www.cnblogs.com/rollenholt/archive/2012/05/02/2479833.html)
@@ -192,6 +217,8 @@ print factorial(10)
 [Getting Started Django in English](https://docs.djangoproject.com/en/1.10/intro/)
 
 [Getting Started Django in zh_CN](http://django-intro-zh.readthedocs.io/zh_CN/latest/)
+
+[how to install django in linux](https://www.digitalocean.com/community/tutorials/how-to-install-the-django-web-framework-on-ubuntu-14-04)
 
 ```html
 一：Virtualenv
