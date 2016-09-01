@@ -1,3 +1,21 @@
+##6笔记(2016.9.1)
+```python
+class Fib(object):
+    def __call__(self,num):
+        a,b,L = 0,1,[]
+        for n in range(num):
+            L.append(a)
+            #a,b = b,a+b
+            c = a+b
+            a = b
+            b = c
+        return L
+f = Fib()
+print f(10)
+#result
+#[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+```
+
 ##5笔记(2016.8.31)
 [理解Python中的装饰器](http://www.cnblogs.com/rollenholt/archive/2012/05/02/2479833.html)
 
