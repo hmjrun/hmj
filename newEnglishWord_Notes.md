@@ -1,3 +1,8 @@
+##7笔记(2016.9.2)
+[一般的java web开发涉及到的开发工具有：jdk、tomcat、git、gradle、eclipse、intelli idea以及在linux下面ibus中文输入法的安装、文本编辑器sublime安装 ](http://yangjianzhouctgu.iteye.com/blog/2289855)
+```html
+
+```
 ##6笔记(2016.9.1)
 ```python
 class Fib(object):
