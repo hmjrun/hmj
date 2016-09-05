@@ -1,6 +1,6 @@
 ##8笔记(2016.9.5)
 ```html
-一：ubuntu install python3.5
+一：ubuntu14 install python3.5
     1, wget https://www.python.org/ftp/python/3.5.2/Python-3.5.2.tar.xz
     2, tar xf Python-3.5.2.tar.xz
     3, cd Python-3.5.2
@@ -8,10 +8,8 @@
     5, make all         
     6, #make install
     
-    change python2 to python3
-        1: sudo mv /usr/bin/python /usr/bin/python2
-        2: sudo ln -s /usr/local/bin/python3 /usr/bin/python
-
+二：
+    my host ip: 115.159.110.64
 
 ```
 
