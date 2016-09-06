@@ -1,3 +1,11 @@
+
+##9笔记(2016.9.6)
+[alipay](https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.yP71rT&treeId=58&articleId=103599&docType=1)
+```html
+    sudo apt-get install openssl-dev
+    sudo apt-get install openssl
+    
+```
 ##8笔记(2016.9.5)
 ```html
 一：ubuntu14 install python3.5
