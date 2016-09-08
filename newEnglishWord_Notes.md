@@ -1,6 +1,7 @@
 
 ##9笔记(2016.9.6)
 [alipay](https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.yP71rT&treeId=58&articleId=103599&docType=1)
+[alipay wap](https://doc.open.alipay.com/doc2/detail.htm?treeId=200&articleId=105310&docType=1#s0)
 ```html
     sudo apt-get install openssl-dev
     sudo apt-get install openssl
