@@ -1,3 +1,4 @@
+[python 装饰器](http://www.cnblogs.com/rhcad/archive/2011/12/21/2295507.html)
 [sublime3](http://www.jianshu.com/p/58bf9e4d5b32)
 ##11笔记(2016.9.8)
 ##10笔记(2016.9.7)
