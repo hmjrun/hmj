@@ -1,4 +1,16 @@
+##10笔记(2016.9.26)
+[postgresql data_bak](http://www.111cn.net/database/196/75406.htm)
+
+```html
+psql -h 127.0.0.1 -d gfloor_debug -U gfloor
+
+sudo pg_dump -h localhost -U gfloor -d gfloor_debug --password -f dump.sql
+
+scp -P9000 huangmj@uc.dreamlabchina.com:/data/dump.sql ~/
+
+
 insert into test_tastypie_entry(title,body,pub_date,slug,user_id)values('tes title 1','title1 body1','2011-05-21T00:46:58','my blosg',1);
+```
 ---
 [python 装饰器](http://www.cnblogs.com/rhcad/archive/2011/12/21/2295507.html)
 
