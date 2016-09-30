@@ -23,11 +23,11 @@ method: GET
 return data:
 	[
 	  {
-	    "order_info": "百度外卖001",
-	    "out_trade_no": "010100000002D",
-	    "seller": "15800005002",
-	    "state": "delivered",
-	    "time": "Tue, 16 Aug 2016 15:17:14 +0800"
+	    "order_info": "美团外卖002",
+	    "out_trade_no": "0102000000530",
+	    "seller": "商家小辣椒6",
+	    "state": "receive",
+	    "time": "Mon, 12 Sep 2016 16:35:31 +0800"
 	  },
 	  ...
 	]	
