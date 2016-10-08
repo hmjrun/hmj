@@ -2,10 +2,10 @@
 ----------------------------------------------------------
 api:
 ----------------------------------------------------------
-给定区域id。查询商家列表
-url: /api/v1/org/role_profile/region_sellers/?region_id=01
-method: GET
-return data : 
+-给定区域id。查询商家列表
+-url: /api/v1/org/role_profile/region_sellers/?region_id=01
+-method: GET
+-return data : 
 	[
 	  {
 	    "invite_code": "0101000000054",
@@ -16,8 +16,9 @@ return data :
 	]
 ---------------------------------------------------------
 给定开始时间，结束时间，区域region_id,或者细化到商家。查询历史订单列表信息
-区域url: 	    /api/v1/takeout/order/history_data/?start_time=2016-08-01&end_time=2016-9-30&region_id=01
-细化到商家url: /api/v1/takeout/order/history_data/?start_time=2016-08-01&end_time=2016-9-30&seller_id=89
+区域:/api/v1/takeout/order/history_data/?start_time=2016-08-01&end_time=2016-9-30&region_id=01
+商家:/api/v1/takeout/order/history_data/?start_time=2016-08-01&end_time=2016-9-30&seller_id=89
+状态:/api/v1/takeout/order/history_data/?start_time=2016-08-01&end_time=2016-9-30&region_id=01&state=delivered
 method: GET
 return data:
 	[
